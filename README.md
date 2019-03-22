@@ -1,2 +1,5 @@
-# Capstone_Project_SA_NN
-Sentiment Analysis and Neural Networks
+
+# Sentiment Analysis
+Multilingual granular polarity classification 
+RNN/LSTM 
+TensorFlow
