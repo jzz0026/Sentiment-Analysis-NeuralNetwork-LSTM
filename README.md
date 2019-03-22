@@ -1,5 +1,5 @@
 
-# Sentiment Analysis
-Multilingual granular polarity classification 
-RNN/LSTM 
-TensorFlow
+## Sentiment Analysis
+- Multilingual polarity classification 
+- RNN/LSTM 
+- TensorFlow
