@@ -34,7 +34,12 @@
     - Remove review repeats
     - Uniform Spelling of Words by lowercasing all words in reviews
     - Removing Special Characters ( . , ! ? ‘ etc) 
-
+- Create label for classification. Review dataset is made of user reviews and ratings:
+    - the reviewText column (string) contains the raw text of the review.
+    - the overall column (double) contains the rating given by the user, in {1.0, 2.0, 3.0, 4.0, 5.0}
+        - Set 0 for the reviews having an overall of 1.0 (neg class),
+        - Set 1 for the reviews having an overall of 5.0 (pos class).
+  
 ## Word Embeddings
 - The words have been replaced by integers that indicate the ordered frequency of each word in the dataset. The sentences in each review are therefore comprised of a sequence of integers.
 - Word Embeddings are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging NLP problems.
