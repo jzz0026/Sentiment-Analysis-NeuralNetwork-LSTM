@@ -10,15 +10,7 @@
     - customer service.
 
 ## Goal
-- In this project a Neural Network model based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
-
-## Recurrent Neural Networks 
-- Classification of human emotion (sentiment) in Amazon reviews. 
-  - Very helpful for companies to assess a product in the market
-- RNN/LSTM 
-- TensorFlow
-
-## Why LSTMs? What challenges does it have? 
+- In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
 
 
 ## Tools
@@ -29,12 +21,25 @@
 
 ## Data
 - Dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014. These reviews, made available by \[[Julian McAuley, UCSD], are raw qualitative (text) and quantitative (rating) evaluations of products by users
+
 ## Preprocessing
+- Before we can use the reviews as inputs for the recurrent neural network it is required to do some preprocessing on the data. Our main purpose here is to shrink the observation space. Following preprocessing techniques are applied:
+    - Remove review repeats
+    - Uniform Spelling of Words by lowercasing all words in reviews
+    - Removing Special Characters ( . , ! ? ‘ etc) 
 
 ## Word Embeddings
+- The words have been replaced by integers that indicate the ordered frequency of each word in the dataset. The sentences in each review are therefore comprised of a sequence of integers.
+- Word Embeddings are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging NLP problems.
+- Each word is mapped to one specific vector and the vector values are learned by the neural network.
+- Toy example:
+"life" = [8.3 5.7 7.8 4.6 2.5 ]
 
-## How to Reduce Overfitting with Regularization?
-- In Keras..
+## How to Reduce Overfitting with Regularization in a Neural Network?
+- Hyperparameter tuning is applied in Keras
+- Dropout regularization is applied to visible or hidden neurons of network model
+- Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
+
 
 
 
