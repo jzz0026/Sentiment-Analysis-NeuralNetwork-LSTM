@@ -28,7 +28,7 @@
 
 
 ## Data
-    - Dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014. These reviews, made available by \[[Julian McAuley, UCSD], are raw qualitative (text) and quantitative (rating) evaluations of products by users
+- Dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014. These reviews, made available by \[[Julian McAuley, UCSD], are raw qualitative (text) and quantitative (rating) evaluations of products by users
 ## Preprocessing
 
 ## Word Embeddings
