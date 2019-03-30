@@ -32,13 +32,13 @@
 - The words have been replaced by integers that indicate the ordered frequency of each word in the dataset. The sentences in each review are therefore comprised of a sequence of integers.
 - Word Embeddings are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging NLP problems.
 - Each word is mapped to one specific vector and the vector values are learned by the neural network.
-- Toy example:
-"life" = [8.3 5.7 7.8 4.6 2.5 ]
+- Toy example since usually we expect higher dimensions:
+"life" = [8.3 5.7 7.8 4.6 2.5]
 
 ## How to Reduce Overfitting with Regularization in a Neural Network?
 - Hyperparameter tuning is applied in Keras
 - Dropout regularization is applied to visible or hidden neurons of network model
-- Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
+- Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. By doing this their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
 
 
 
