@@ -74,5 +74,5 @@ with open(output_text_file[:-4] + "json", "w") as out:
 
 
 ### Create lable for classification
-#Set 0 for the reviews having an overall of 1.0 (neg class),
-#Set 1 for the reviews having an overall of 5.0 (pos class).
+"""Set 0 for the reviews having an overall of 1.0 (neg class),
+Set 1 for the reviews having an overall of 5.0 (pos class)."""
