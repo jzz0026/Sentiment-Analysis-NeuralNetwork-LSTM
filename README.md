@@ -12,6 +12,9 @@
 ## Goal
 - In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
 
+## Why LSTMs over plain RNN?
+
+
 
 ## Tools
   - Python 3.6.8
@@ -20,7 +23,7 @@
 
 
 ## Data
-- Dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014. These reviews, made available by \[[Julian McAuley, UCSD], are raw qualitative (text) and quantitative (rating) evaluations of products by users
+- Dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014. These reviews, made available by [Julian McAuley, UCSD](http://jmcauley.ucsd.edu/data/amazon/), are raw qualitative (text) and quantitative (rating) evaluations of products by users
 
 ## Preprocessing
 - Before we can use the reviews as inputs for the recurrent neural network it is required to do some preprocessing on the data. Our main purpose here is to shrink the observation space. Following preprocessing techniques are applied:
@@ -33,7 +36,7 @@
 - Word Embeddings are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging NLP problems.
 - Each word is mapped to one specific vector and the vector values are learned by the neural network.
 - Toy example since usually we expect higher dimensions:
-"life" = [8.3 5.7 7.8 4.6 2.5]
+"life" = [6.3 2.5 8.7 3.4 1.5]
 
 ## How to Reduce Overfitting with Regularization in a Neural Network?
 - Hyperparameter tuning is applied in Keras
