@@ -7,6 +7,17 @@ from keras.layers import Dropout
 from keras.layers.embeddings import Embedding
 from keras.preprocessing import sequence
 
+
+
+numpy.random.seed(9)
+word_embed=os.path.abspath(os.path.join(root_path, 'data/word2embed.txt'))
+
+# Funtion to load cleaned and vectorizzed reviews
+#  but only keep the top n words, zero the rest
+top_words = 5000
+(X_train, y_train), (X_test, y_test) = word_embed(num_words=top_words)
+max_review_length = 500
+
 #LSTMs have the tendency to overfit and we need to apply regularization
 #some hyperparameter tuning is needed
 #Inside LSTM function we tune dropout setting

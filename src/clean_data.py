@@ -1,18 +1,3 @@
-
-
-#function to clean data files
-remove repeats
-remove punctuation
-lower case all word
-
-
-#Function to encode target
-a review of 1 is encoded as negative class 0 
-a review of 5 is encoded as positive class 1
-
-
-# Code to train a word2vec model with gensim
-# For use with ml5.js word2vec examples
 from gensim.models import Word2Vec
 import re
 import json
@@ -21,40 +6,50 @@ import argparse
 import glob
 import os
 
-#Parsing for the user arguments
-parser = argparse.ArgumentParser(description="Text File to Word2Vec Vectors")
 
-#Required input file
-parser.add_argument("input", help="Path to the input text file")
 
-#Optional arguments (room for further extending the script's capabilities)
-parser.add_argument("-o", "--output", default="vector.json", help="Path to the output text file (default: vector.json)")
+root_path = Path(__file__).parents[2]
+files = os.path.abspath(os.path.join(root_path, 'data/..'))  
+cleaned_files=os.path.abspath(os.path.join(root_path, 'data/..'))  
+word_embed=os.path.abspath(os.path.join(root_path, 'data/word2embed.txt'))
 
-args = parser.parse_args()
 
-#Using the arguments from the arg dictionary
-output_text_file = args.output
-
-listOfFiles = []
-if os.path.isdir(args.input):
+def read_files():
+    #Parsing for the user arguments
+    parser = argparse.ArgumentParser(word_embed)
+    #Required input file
+    parser.add_argument("input", files )
+    #Optional arguments (room for further extending the script's capabilities)
+    parser.add_argument("-o", "--output", default="vector.json",word_embed)
+    args = parser.parse_args()
+    #Using the arguments from the arg dictionary
+    output_text_file = args.output
+    listOfFiles = []
+    if os.path.isdir(args.input):
     # Make a list with all txt in the folder
-    listOfFiles = glob.glob(args.input + '/*.txt')
-else:
-    # use a single file
-    listOfFiles.append(args.input)
+        listOfFiles = glob.glob(args.input + '/*.txt')
+    else:
+        # use a single file
+        listOfFiles.append(args.input)
+    return listOfFiles
 
-final_sentences = []
-for file in listOfFiles:
-    text = open(file).read().lower().replace("\n", " ") # Remove lineabreaks
-    # Split into sentences (this could be improved! Using nltk?)
-    sentences = re.split("[.?!]", text)
-    # Split each sentence into words! (this could also be improved!)
-    for sentence in sentences:
-        words = re.split(r'\W+', sentence)
-        final_sentences.append(words)
+listOfFiles = read_files()
+def clean_data():
+    final_sentences = []
+    for file in listOfFiles:
+        text = open(file).read().lower().replace("\n", " ") # Remove lineabreaks
+        # Split into sentences 
+        sentences = re.split("[.?!]", text)
+        # Split each sentence into words!
+        for sentence in sentences:
+            words = re.split(r'\W+', sentence)
+            final_sentences.append(words)
+    return final_sentences
 
 
 # Create the Word2Vec model
+output_text_file = word_embed.open()
+final_sentences = clean_data()
 model = Word2Vec(final_sentences, size=100, window=5, min_count=5, workers=4)
 # Save the vectors to a text file
 model.wv.save_word2vec_format(output_text_file, binary=False)
@@ -72,8 +67,18 @@ with open(output_text_file[:-4] + "json", "w") as out:
     json.dump(v, out)
 
 
+def add_label():
+    '''Add a label of either 0 (genative) or 1 (positive) to each review and write it to a new .txt-file'''
+    
+    cleaned_files_path=[cleaned_files]
+    labels=[0,1]
 
-### Create lable for classification
-"""Set 0 for the reviews having an overall of 1.0 (neg class),
-Set 1 for the reviews having an overall of 5.0 (pos class)."""
-   
+    with open(cleaned_files_path, 'w') as writer:
+        for file, label in zip(cleaned_files_path, labels):
+            for line in open(file):
+                line=line.rstrip('\n') + '| ' + str(label)+'\n'
+                writer.write(line)   
+
+
+
+
