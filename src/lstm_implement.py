@@ -28,5 +28,5 @@ X_test = sequence.pad_sequences(X_test, maxlen=max_review_length)
 layer is the LSTM layer with 100 memory units (smart neurons). Finally, because this is a classification 
 problem we use a Dense output layer with a single neuron and a sigmoid activation function to make 0 or 1 
 predictions for the two classes (pos and neg) in the problem."""
-
+      
 
