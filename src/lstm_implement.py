@@ -31,7 +31,7 @@ predictions for the two classes (pos and neg) in the problem."""
 embedding_vecor_length = 32
 model = Sequential()
 model.add(Embedding(top_words, embedding_vecor_length, input_length=max_review_length))
-model.add(LSTM(100))
+model.add(LSTM(100))    ##Consider LSTM layer with 100 memory units
 model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 print(model.summary())
