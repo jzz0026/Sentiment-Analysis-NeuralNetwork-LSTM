@@ -12,11 +12,12 @@ from keras.preprocessing import sequence
 numpy.random.seed(9)
 word_embed=os.path.abspath(os.path.join(root_path, 'data/word2embed.txt'))
 
-# Funtion to load cleaned and vectorizzed reviews
+# Funtion to load cleaned and vectorized reviews
 #  but only keep the top n words, zero the rest
 top_words = 5000
-(X_train, y_train), (X_test, y_test) = word_embed(num_words=top_words)
+(X_train, y_train), (X_test, y_test) = word_embed([0:top_words])
 max_review_length = 500
+embedding_vecor_length = 32
 
 #LSTMs have the tendency to overfit and we need to apply regularization
 #some hyperparameter tuning is needed
@@ -24,20 +25,10 @@ max_review_length = 500
 #Dropuout: randomly selects nodes to be dropped-out with a given probability (e.g. 20%) each weight update cycle. 
 #Dropout is only used during the training of a model and is not used when evaluating the skill of the model.
 
-#We will use dropout on layers between the Embedding and LSTM layers and the LSTM and Dense output layers
-model = Sequential()
-model.add(Embedding(top_words, embedding_vecor_length, input_length=max_review_length))
-model.add(Dropout(0.2))
-model.add(LSTM(100))
-model.add(Dropout(0.2))
-model.add(Dense(1, activation='sigmoid'))
-
-
-# fix random seed for reproducibility
-numpy.random.seed(7)
+numpy.random.seed(9)
 # load the dataset but only keep the top n words, zero the rest
 top_words = 5000
-(X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=top_words)
+(X_train, y_train), (X_test, y_test) = word_embed([0:top_words])
 # truncate and pad input sequences
 max_review_length = 500
 X_train = sequence.pad_sequences(X_train, maxlen=max_review_length)

@@ -5,9 +5,10 @@ from keras.layers import Dense
 from keras.layers.embeddings import Embedding
 from keras.preprocessing import sequence
 
-numpy.random.seed(9)
+root_path = Path(__file__).parents[2]
 word_embed=os.path.abspath(os.path.join(root_path, 'data/word2embed.txt'))
 
+numpy.random.seed(9)
 # Funtion to load cleaned and vectorizzed reviews
 #  but only keep the top n words, zero the rest
 top_words = 5000
