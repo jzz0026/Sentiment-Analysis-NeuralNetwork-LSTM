@@ -19,6 +19,13 @@
     - Forget Gate
     - Input Gate
     - Output Gate
+- The figure below shows the architechture of a LSTM network
+![LSTM Architecture](lstm_diag.jpg)
+- Toy example for LSTM:
+    - Consider the following review for a product:
+    - I am certainty not happy with the product.
+    - If we were to look at each word independently then based on certainty and happy, review will be classified as positive. However, LSTM helps us with word dependencies and by keeping track of the order of the words in the sentece. In this way, LSTM model is able to learn that not comes after certainly and before happy, hence classifying the review as negative.
+    
 
 ## Tools
   - Python 3.6.8
@@ -49,8 +56,15 @@
 
 ## How to Reduce Overfitting with Regularization in a Neural Network?
 - Hyperparameter tuning is applied in Keras
-- Dropout regularization is applied to visible or hidden neurons of network model
-- Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. By doing this their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
+- Dropout regularization is applied to reduce overfitting
+- Dropout is a technique where randomly selected neurons are ignored during training and they are dropped out at random. In the fordward pass, the contribution of these nurons is also removed and any weight updates are not applied to the neuron on the backward pass. The main idea behind the regularization, is that as neurons are randomly dropped out of the network during training, then other neurons have to step in and handle the representation required to make predictions for the missing neurons which results in multiple independent internal representations being learned by the network. The impact of this is very significant in the optimization of the network, as the network becomes less sensitive to the specific weights of neurons. This in turn results in a network that is capable of better generalization which will make it less likely to overfit the training data.
+- Method to optimize LSTM model:
+    - Tune Dropout hyperparameter until we achieve the degree regularization we consider appropriate
+    - We can evaluate accuracy scores for train and test data sets as a function of the number of data points (#reviews). This plot will help us make a sane judment of wheter we have enough data points or we have to many as well as if LSTM model is overfitting and Dropout rate has to be tuned further. 
+    - Dropout can be applied between layers using the Dropout Keras layer. We can do this by adding Dropout layers between the Embedding and LSTM layers.
+    - We consider 20 million reviews and 100 memory units
+    
+    
 
 
 
