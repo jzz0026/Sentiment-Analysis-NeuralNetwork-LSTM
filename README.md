@@ -66,7 +66,7 @@
     - We consider 20 million reviews and 100 memory units
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG">
+  <img width="460" height="400" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG">
 </p>
 
 
