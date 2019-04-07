@@ -19,7 +19,7 @@
     - Forget Gate
     - Input Gate
     - Output Gate
-
+- LSTM Architecture:
 <p align="center">
   <img width="650" height="300" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG">
 </p>
