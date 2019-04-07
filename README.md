@@ -53,6 +53,7 @@
 - Each word is mapped to one specific vector and the vector values are learned by the neural network.
 - Toy example since usually we expect higher dimensions:
 "life" = [6.3 2.5 8.7 3.4 1.5]
+- For the model I consider the following: Embedding layer provided by Keras where each word is mapped into a 32 length real valued vector. We bound the length (number of words) in each review to 300 words. In the case of long reviews, we truncate them and, for shorter reviews, we pad them with zero values.
 
 ## How to Reduce Overfitting with Regularization in a Neural Network?
 - Hyperparameter tuning is applied in Keras
@@ -63,6 +64,7 @@
     - We can evaluate accuracy scores for train and test data sets as a function of the number of data points (#reviews). This plot will help us make a sane judment of wheter we have enough data points or we have to many as well as if LSTM model is overfitting and Dropout rate has to be tuned further. 
     - Dropout can be applied between layers using the Dropout Keras layer. We can do this by adding Dropout layers between the Embedding and LSTM layers.
     - We consider 20 million reviews and 100 memory units
+    
 ![Hyperparameter Tuning of LSTM model](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG)
     
     
