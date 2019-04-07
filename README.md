@@ -23,7 +23,7 @@
 ![LSTM Architecture](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG)
 - Toy example for LSTM:
     - Consider the following review for a product:
-    - I am certainty not happy with the product.
+      "I am certainty not happy with the product"
     - If we were to look at each word independently then based on certainty and happy, review will be classified as positive. However, LSTM helps us with word dependencies and by keeping track of the order of the words in the sentece. In this way, LSTM model is able to learn that not comes after certainly and before happy, hence classifying the review as negative.
     
 
