@@ -19,8 +19,12 @@
     - Forget Gate
     - Input Gate
     - Output Gate
-- The figure below shows the architechture of a LSTM network
-![LSTM Architecture](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG)
+
+<p align="center">
+  <img width="560" height="400" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG">
+</p>
+
+
 - Toy example for LSTM:
     - Consider the following review for a product:
       "I am certainty not happy with the product"
@@ -66,7 +70,7 @@
     - We consider 20 million reviews and 100 memory units
 
 <p align="center">
-  <img width="460" height="400" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG">
+  <img width="560" height="400" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG">
 </p>
 
 
