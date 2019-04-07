@@ -21,7 +21,7 @@
     - Output Gate
 
 <p align="center">
-  <img width="560" height="400" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG">
+  <img width="560" height="300" src="https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG">
 </p>
 
 
