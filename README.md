@@ -20,7 +20,7 @@
     - Input Gate
     - Output Gate
 - The figure below shows the architechture of a LSTM network
-![LSTM Architecture](lstm_diag.jpg)
+![LSTM Architecture](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_diag.JPG)
 - Toy example for LSTM:
     - Consider the following review for a product:
     - I am certainty not happy with the product.
