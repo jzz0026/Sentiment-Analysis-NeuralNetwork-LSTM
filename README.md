@@ -13,7 +13,7 @@
 - In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
 
 ## Why LSTMs over plain RNN?
-- Long Short-Term Memory networks (LSTMs) are a special kind of RNN, capable of learning long-term dependencies. LSTMs do not have a fundamentally different architecture from RNNs, but they incorporate additional components.
+- Long Short-Term Memory networks (LSTMs)  are a special kind of Recurrent Neural Networks (RNN), capable of learning long-term dependencies. LSTMs do not have a fundamentally different architecture from RNNs, but they incorporate additional components.
 - The key to LSTMs is the cell state c(t). A cell state is an additional way to store memory, beyonf using the hidden state h(t). However, c(t) makes it possible that LSTMs can work with much longer sequences as opposed to vanilla RNNs.
 - Furthermore, LSTMs have the ability to remove or add information to the cell state, carefully regulated by structures called gates. Gates are a way to optionally let information through. An LSTM has three of these gates, to protect and control the cell state.
     - Forget Gate
