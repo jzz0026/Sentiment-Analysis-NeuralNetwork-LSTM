@@ -63,6 +63,7 @@
     - We can evaluate accuracy scores for train and test data sets as a function of the number of data points (#reviews). This plot will help us make a sane judment of wheter we have enough data points or we have to many as well as if LSTM model is overfitting and Dropout rate has to be tuned further. 
     - Dropout can be applied between layers using the Dropout Keras layer. We can do this by adding Dropout layers between the Embedding and LSTM layers.
     - We consider 20 million reviews and 100 memory units
+![Hyperparameter Tuning of LSTM model](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG)
     
     
 
