@@ -65,7 +65,10 @@
     - Dropout can be applied between layers using the Dropout Keras layer. We can do this by adding Dropout layers between the Embedding and LSTM layers.
     - We consider 20 million reviews and 100 memory units
     
-![Hyperparameter Tuning of LSTM model](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG)
+   ![Hyperparameter Tuning of LSTM model](https://github.com/mtorrico/Sentiment-Analysis-NeuralNetwork-LSTM/blob/master/lstm_opt.JPG)
+   
+- LSTM model was optimized in AWS for convience is speed when hadling millions of reviews.
+- From the plot, we can see by looking at the train curve, that a Dropout rate of 10% leads to no improvement after 12.5 million reviews. Since, Dropout is only performed during trainig, we expect the train accuracy score to be relatively high as our model will have better generalization. When looking at the test accuracy score, we see no improvement after 7.5 million reviews. This tells us that our model could be furhter optimized and have more data to learn (20 million reviews), so we set the Dropout rate to 20%. For this case, our model is able to use all reviews for learning as well us being able to cassify with accuracy scores of 0.936 and 0.862 for train and test data sets respectively.
     
     
 
