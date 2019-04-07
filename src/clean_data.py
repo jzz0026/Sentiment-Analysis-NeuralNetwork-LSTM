@@ -46,7 +46,6 @@ def clean_data():
             final_sentences.append(words)
     return final_sentences
 
-
 # Create the Word2Vec model
 output_text_file = word_embed.open()
 final_sentences = clean_data()
