@@ -7,7 +7,7 @@
     - commercial applications such as marketing analysis
     - public relations
     - product reviews and feedback
-    - customer service.
+    - customer service
 
 ## Goal
 - In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
