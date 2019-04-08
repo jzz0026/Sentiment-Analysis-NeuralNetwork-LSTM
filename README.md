@@ -10,7 +10,7 @@
     - customer service
 
 ## Goal
-- In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either possitive or negative.
+- In this project a Neural Network (Deep Learning model) based on Recurrent Neural Networks aims to classify human emotion (sentiment) in an Amazon review. In other words, we are interested in the sentiment that an Amazon review conveys which could be either positive or negative.
 
 ## Why LSTMs over plain RNN?
 - Long Short-Term Memory networks (LSTMs)  are a special kind of Recurrent Neural Networks (RNN), capable of learning long-term dependencies. LSTMs do not have a fundamentally different architecture from RNNs, but they incorporate additional components.
