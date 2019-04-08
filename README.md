@@ -1,7 +1,7 @@
 
 # Sentiment Analysis of Amazon reviews with Recurrent Neural Networks (RNN)/Long Short-Term Memory networks (LSTM)
 ## Motivation
-- One of the most important elements for a business is to constanly be aware of the customer reaction and interaction with the company's product. It is vital for these organizations to know exactly (or asses with high probability) what consumers or clients think of recently released and established products or services. Companies are also interested in evaluating customer response to recent initiatives as well as customer service offerings.
+- One of the most important elements for a business is to constantly be aware of the customer reaction and interaction with the company's product. It is vital for these organizations to know exactly (or asses with high probability) what consumers or clients think of recently released and established products or services. Companies are also interested in evaluating customer response to recent initiatives as well as customer service offerings.
 - Sentiment analysis is one way to accomplish this necessary task. Sentiment analysis is a field of Natural Language Processing (NLP) that builds models with the aim to identify and classify attributes of the expression contained in the text. We are interested in identifying polarity in the Amazon review text.
 - Sentiment Analysis can help to automatically transform the unstructured information into structured data of public opinions about products, services, brands, politics or any other topic that people can express opinions about. This data can be very useful for:
     - commercial applications such as marketing analysis
